@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Nishita G | Developer Portfolio</title>
+  <meta name="description" content="Personal portfolio of Nishita G, an Information Science and Engineering student at Bangalore Institute of Technology passionate about programming, problem solving, and software development." />
+  <meta name="author" content="Nishita G" />
+  <meta name="keywords" content="Nishita G, Portfolio, Bangalore Institute of Technology, Information Science and Engineering, C Programming, Python, Web Development, SQL" />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nishita G | Developer Portfolio" />
+  <meta property="og:description" content="Exploring technology, building projects, and turning ideas into practical solutions." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Orbs & Overlay -->
+  <div class="ambient-lights" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header>
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+      <div class="container nav-wrapper">
+        <!-- Brand / Monogram -->
+        <a href="#hero" class="brand-logo" aria-label="Nishita G Homepage">
+          <div class="monogram-badge">NG</div>
+          <div class="brand-text">
+            <span class="brand-name">Nishita G</span>
+            <span class="brand-tag">&lt;ise.student&gt;</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#exploring" class="nav-link">Exploring</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Nav Actions: Theme Switcher, Light/Dark Mode, Status Badge & Mobile Hamburger -->
+        <div class="nav-actions">
+          <!-- Light / Dark Mode Toggle (White Theme) -->
+          <button class="mode-toggle-btn" id="mode-toggle-btn" aria-label="Toggle Light / Dark Mode" title="Toggle Light / Dark Mode">
+            <span class="mode-icon-sun" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </span>
+            <span class="mode-icon-moon" aria-hidden="true" style="display: none;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+            <span class="mode-label">Light</span>
+          </button>
+
+          <!-- Live Theme Accent Switcher -->
+          <div class="theme-picker">
+            <button class="theme-picker-btn" id="theme-picker-btn" aria-label="Change Accent Color Theme">
+              <span class="theme-active-dot" id="theme-active-dot"></span>
+              <span>Theme</span>
+            </button>
+            <div class="theme-dropdown" id="theme-dropdown">
+              <button class="theme-opt-btn" data-theme-choice="default">
+                <span class="theme-opt-dot" style="background: #A78BFA;"></span>
+                <span>Violet</span>
+              </button>
+              <button class="theme-opt-btn" data-theme-choice="emerald">
+                <span class="theme-opt-dot" style="background: #34D399;"></span>
+                <span>Emerald</span>
+              </button>
+              <button class="theme-opt-btn" data-theme-choice="rose">
+                <span class="theme-opt-dot" style="background: #F472B6;"></span>
+                <span>Rose</span>
+              </button>
+              <button class="theme-opt-btn" data-theme-choice="amber">
+                <span class="theme-opt-dot" style="background: #F59E0B;"></span>
+                <span>Amber</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="status-pill" title="Open to opportunities & projects">
+            <span class="status-dot"></span>
+            <span>Open to Learning</span>
+          </div>
+
+          <button class="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav" aria-label="Mobile Navigation Menu">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#education" class="mobile-nav-link">Education</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#exploring" class="mobile-nav-link">Exploring</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+
+    <div style="padding-top: 24px; border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 12px;">
+      <button class="mode-toggle-btn" id="mobile-mode-toggle-btn" style="width: 100%; justify-content: center; padding: 10px;" aria-label="Toggle Light / Dark Mode">
+        <span class="mode-icon-sun" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </span>
+        <span class="mode-icon-moon" aria-hidden="true" style="display: none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </span>
+        <span class="mode-label">Light Mode</span>
+      </button>
+
+      <div class="status-pill" style="justify-content: center; width: 100%;">
+        <span class="status-dot"></span>
+        <span>BIT Bengaluru • ISE '30</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       1. HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <!-- Interactive Canvas Particle Field with Mouse Links & Shockwaves -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <div class="container">
+      <div class="hero-content">
+        <!-- Greeting Eyebrow -->
+        <div class="greeting-pill reveal-on-scroll">
+          <span class="wave-hand">👋</span>
+          <span>Hello, I'm</span>
+        </div>
+
+        <!-- Name Display -->
+        <h1 class="hero-name reveal-on-scroll delay-1">
+          <span class="gradient-text">Nishita G</span>
+        </h1>
+
+        <!-- Dynamic Typewriter Headline -->
+        <h2 class="hero-headline reveal-on-scroll delay-2">
+          <span id="hero-typewriter">Aspiring Developer</span><span class="typewriter-cursor">|</span>
+        </h2>
+
+        <!-- Short Description -->
+        <p class="hero-description reveal-on-scroll delay-3">
+          Exploring technology, building projects, and turning ideas into practical solutions.
+          Passionate about programming fundamentals, clean code, and continuous learning.
+        </p>
+
+        <!-- Tech Chips / Quick Badges -->
+        <div class="hero-tech-pills reveal-on-scroll delay-3">
+          <span class="tech-chip"><i data-lucide="code-2" style="width: 14px; height: 14px;"></i> C Programming</span>
+          <span class="tech-chip"><i data-lucide="terminal" style="width: 14px; height: 14px;"></i> Python</span>
+          <span class="tech-chip"><i data-lucide="layout" style="width: 14px; height: 14px;"></i> HTML &amp; CSS</span>
+          <span class="tech-chip"><i data-lucide="database" style="width: 14px; height: 14px;"></i> SQL</span>
+          <span class="tech-chip"><i data-lucide="table" style="width: 14px; height: 14px;"></i> Excel</span>
+        </div>
+
+        <!-- Primary CTA Buttons -->
+        <div class="hero-cta-group reveal-on-scroll delay-4">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore My Work</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Contact Me</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+      <div class="mouse-icon">
+        <div class="mouse-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- =========================================================================
+       2. ABOUT ME SECTION (With Dual-Mode Interactive Terminal)
+       ========================================================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>01. Introduction</span>
+        </div>
+        <h2 class="section-title">A Little About Me</h2>
+        <p class="section-subtitle">
+          An engineering student building strong foundations in computer science, software development, and algorithmic thinking.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Interactive Developer Card / Live Terminal Emulator -->
+        <div class="terminal-card tilt-card reveal-on-scroll">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            
+            <!-- Terminal Tab Switcher -->
+            <div class="term-tabs-row">
+              <button class="term-tab active" id="tab-code-btn" onclick="switchTerminalTab('code')">📄 profile.json</button>
+              <button class="term-tab" id="tab-cli-btn" onclick="switchTerminalTab('cli')">⚡ terminal.sh (interactive)</button>
+            </div>
+
+            <div class="terminal-title">bash ~ bit-ise</div>
+          </div>
+
+          <!-- Mode 1: Code View -->
+          <div class="terminal-body" id="term-view-code">
+            <div class="code-line">
+              <span class="line-number">01</span>
+              <span class="code-content"><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">02</span>
+              <span class="code-content">&nbsp;&nbsp;<span class="code-var">name</span>: <span class="code-string">"Nishita G"</span>,</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">03</span>
+              <span class="code-content">&nbsp;&nbsp;<span class="code-var">college</span>: <span class="code-string">"Bangalore Institute of Technology"</span>,</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">04</span>
+              <span class="code-content">&nbsp;&nbsp;<span class="code-var">branch</span>: <span class="code-string">"Information Science &amp; Engg (ISE)"</span>,</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">05</span>
+              <span class="code-content">&nbsp;&nbsp;<span class="code-var">graduationYear</span>: <span class="code-bool">2030</span>,</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">06</span>
+              <span class="code-content">&nbsp;&nbsp;<span class="code-var">location</span>: <span class="code-string">"Bengaluru, Karnataka, India"</span>,</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">07</span>
+              <span class="code-content">&nbsp;&nbsp;<span class="code-var">passions</span>: [</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">08</span>
+              <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"Programming"</span>, <span class="code-string">"Problem-Solving"</span>, <span class="code-string">"Tech"</span></span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">09</span>
+              <span class="code-content">&nbsp;&nbsp;],</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">10</span>
+              <span class="code-content">&nbsp;&nbsp;<span class="code-var">continuousLearner</span>: <span class="code-bool">true</span></span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">11</span>
+              <span class="code-content">};</span>
+            </div>
+
+            <div class="terminal-footer-badge">
+              <span>Status: <span style="color: #34D399;">● Active Student &amp; Builder</span></span>
+              <span>Click "terminal.sh" above to type commands!</span>
+            </div>
+          </div>
+
+          <!-- Mode 2: Live Interactive Terminal Screen -->
+          <div class="terminal-interactive-view" id="term-view-cli">
+            <div class="term-history-log" id="term-history-log">
+              <div class="term-line-output">Welcome to <strong>NishitaOS v2.4</strong> [BIT ISE Edition]
+Type <strong style="color: var(--accent-purple-light);">'help'</strong> or click any chip below to run commands!</div>
+            </div>
+            <div class="term-command-row">
+              <span class="term-prompt-txt">nishita@bit:~$</span>
+              <input type="text" id="terminal-cli-input" class="term-command-input" autocomplete="off" spellcheck="false" placeholder="type command (help, about, skills...)" />
+            </div>
+            <div class="term-chips-shelf">
+              <span class="term-chips-label">Quick:</span>
+              <button class="term-chip-btn" data-cmd="help">help</button>
+              <button class="term-chip-btn" data-cmd="about">about</button>
+              <button class="term-chip-btn" data-cmd="skills">skills</button>
+              <button class="term-chip-btn" data-cmd="projects">projects</button>
+              <button class="term-chip-btn" data-cmd="bit">bit</button>
+              <button class="term-chip-btn" data-cmd="confetti">confetti 🎉</button>
+              <button class="term-chip-btn" data-cmd="clear">clear</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Story Narrative & Highlight Metrics -->
+        <div class="about-narrative reveal-on-scroll delay-1">
+          <p class="about-intro-lead">
+            I am an Information Science and Engineering student at <span class="gradient-text">Bangalore Institute of Technology</span>, passionate about programming, technology, and building software that solves practical problems.
+          </p>
+
+          <p class="about-text">
+            My journey began with a curiosity for how computers execute instructions and how lines of code translate into meaningful applications. Right now, I am dedicated to developing my programming fundamentals through C and Python, understanding how data flows, and exploring web technologies.
+          </p>
+
+          <p class="about-text">
+            I believe that great engineering starts with solid foundations: clear logic, methodical problem-solving, and a habit of consistent practice. As I progress through my engineering degree, I am excited to take on real-world projects, collaborate with fellow builders, and turn ideas into dependable solutions.
+          </p>
+
+          <!-- 4 Highlights Grid -->
+          <div class="about-highlights-grid">
+            <div class="highlight-box tilt-card">
+              <div class="box-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <div class="box-label">Institution</div>
+              <div class="box-value">Bangalore Institute of Tech</div>
+            </div>
+
+            <div class="highlight-box tilt-card">
+              <div class="box-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+              </div>
+              <div class="box-label">Degree Focus</div>
+              <div class="box-value">Information Science (ISE)</div>
+            </div>
+
+            <div class="highlight-box tilt-card">
+              <div class="box-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="box-label">Timeline</div>
+              <div class="box-value">Graduating Class of 2030</div>
+            </div>
+
+            <div class="highlight-box tilt-card">
+              <div class="box-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              </div>
+              <div class="box-label">Location</div>
+              <div class="box-value">Bengaluru, Karnataka</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. EDUCATION SECTION
+       ========================================================================= -->
+  <section class="section" id="education" style="background: rgba(15, 15, 23, 0.4);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>02. Academics</span>
+        </div>
+        <h2 class="section-title">Education &amp; Journey</h2>
+        <p class="section-subtitle">
+          My academic roadmap and formal engineering training in Information Science and Engineering.
+        </p>
+      </div>
+
+      <div class="education-container">
+        <div class="timeline">
+          <!-- Timeline Item: BIT Bengaluru -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-node"></div>
+            
+            <div class="education-card tilt-card">
+              <div class="education-badge-row">
+                <span class="badge-year">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  2026 – 2030 (Expected Graduation)
+                </span>
+                <span class="badge-location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Bengaluru, Karnataka
+                </span>
+              </div>
+
+              <h3 class="institution-name">Bangalore Institute of Technology</h3>
+              <h4 class="degree-name">Bachelor of Engineering (B.E.) in Information Science and Engineering</h4>
+              
+              <p class="education-desc">
+                Enrolled in one of Karnataka's premier engineering institutions situated in Bengaluru, the technology hub of India. Building an extensive foundation across programming paradigms, computational mathematics, software engineering practices, and system architecture.
+              </p>
+
+              <!-- Relevant Coursework / Focus Topics -->
+              <div class="coursework-container">
+                <div class="coursework-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+                  Key Foundational Areas &amp; Coursework
+                </div>
+                <div class="coursework-tags">
+                  <span class="course-tag">Problem Solving through C</span>
+                  <span class="course-tag">Mathematics for Computing</span>
+                  <span class="course-tag">Python Programming</span>
+                  <span class="course-tag">Data Organization &amp; Analysis</span>
+                  <span class="course-tag">Database Management (SQL)</span>
+                  <span class="course-tag">Web Fundamentals (HTML/CSS)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. SKILLS SECTION ("My Technical Toolkit" with Interactive Filters & Peek)
+       ========================================================================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>03. Skills &amp; Toolkit</span>
+        </div>
+        <h2 class="section-title">My Technical Toolkit</h2>
+        <p class="section-subtitle">
+          Foundational technologies and tools I am actively developing. Click any skill card to inspect sample code!
+        </p>
+      </div>
+
+      <!-- Skill Category Filter Tabs -->
+      <div class="skills-filter-container reveal-on-scroll">
+        <div class="skills-filter-bar">
+          <button class="skill-filter-btn active" data-filter="all">All Skills (6)</button>
+          <button class="skill-filter-btn" data-filter="languages">Languages</button>
+          <button class="skill-filter-btn" data-filter="web">Web Tech</button>
+          <button class="skill-filter-btn" data-filter="database">Database</button>
+          <button class="skill-filter-btn" data-filter="tools">Productivity</button>
+        </div>
+      </div>
+
+      <!-- 1. Programming Languages -->
+      <div class="skills-category-group reveal-on-scroll" data-category="languages">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <h3 class="category-title">Programming Languages</h3>
+        </div>
+
+        <div class="skills-grid">
+          <!-- C Programming -->
+          <div class="skill-card tilt-card clickable-skill" onclick="inspectSkill('c')" title="Click to inspect sample C code">
+            <div class="skill-top">
+              <div class="skill-icon-wrap" style="color: #60A5FA;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M14.5 9a3.5 3.5 0 0 0-5 0 3.5 3.5 0 0 0 0 5 3.5 3.5 0 0 0 5 0"></path></svg>
+              </div>
+              <div class="skill-name-wrap">
+                <div class="skill-name">C Programming</div>
+                <span class="skill-stage">Core Foundation</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Strong grasp of procedural programming, data types, control flow structures, functions, pointers, and memory management basics.
+            </p>
+            <div class="skill-inspect-badge">Inspect Code ↗</div>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-card tilt-card clickable-skill" onclick="inspectSkill('python')" title="Click to inspect sample Python code">
+            <div class="skill-top">
+              <div class="skill-icon-wrap" style="color: #FBBF24;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v2H5a3 3 0 0 0-3 3v2a5 5 0 0 0 5 5h2v-2a3 3 0 0 1 3-3h4a3 3 0 0 0 3-3V7a5 5 0 0 0-5-5h-2z"></path><circle cx="9" cy="6" r="1" fill="currentColor"></circle><circle cx="15" cy="18" r="1" fill="currentColor"></circle></svg>
+              </div>
+              <div class="skill-name-wrap">
+                <div class="skill-name">Python</div>
+                <span class="skill-stage">Actively Practicing</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Writing clean, readable code for algorithms, logic building, CLI utilities, mathematical operations, and beginner interactive games.
+            </p>
+            <div class="skill-inspect-badge">Inspect Code ↗</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Web Technologies -->
+      <div class="skills-category-group reveal-on-scroll delay-1" data-category="web" style="margin-top: 36px;">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h3 class="category-title">Web Technologies</h3>
+        </div>
+
+        <div class="skills-grid">
+          <!-- HTML -->
+          <div class="skill-card tilt-card clickable-skill" onclick="inspectSkill('html')" title="Click to inspect sample HTML structure">
+            <div class="skill-top">
+              <div class="skill-icon-wrap" style="color: #FB923C;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 4 6 20 18 20 20 4"></polyline><polyline points="8 8 16 8"></polyline><polyline points="8 12 15 12"></polyline><polyline points="9 16 12 17 14 16"></polyline></svg>
+              </div>
+              <div class="skill-name-wrap">
+                <div class="skill-name">HTML5</div>
+                <span class="skill-stage">Semantic Markup</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Structuring accessible, clean web pages using modern HTML5 tags, standard document hierarchy, and SEO-friendly architecture.
+            </p>
+            <div class="skill-inspect-badge">Inspect Code ↗</div>
+          </div>
+
+          <!-- CSS -->
+          <div class="skill-card tilt-card clickable-skill" onclick="inspectSkill('css')" title="Click to inspect sample CSS styling">
+            <div class="skill-top">
+              <div class="skill-icon-wrap" style="color: #38BDF8;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L18 20L12 22L6 20L4 4H20Z"></path><path d="M7.5 8.5H16.5L16 12H8L8.5 15.5L12 16.5L15.5 15.5L15.8 13.5"></path></svg>
+              </div>
+              <div class="skill-name-wrap">
+                <div class="skill-name">CSS3</div>
+                <span class="skill-stage">Styling &amp; Layouts</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Crafting responsive interfaces using Flexbox, CSS Grid, media queries, CSS custom properties, and smooth micro-animations.
+            </p>
+            <div class="skill-inspect-badge">Inspect Code ↗</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Database -->
+      <div class="skills-category-group reveal-on-scroll delay-2" data-category="database" style="margin-top: 36px;">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+          </div>
+          <h3 class="category-title">Database Management</h3>
+        </div>
+
+        <div class="skills-grid">
+          <!-- SQL -->
+          <div class="skill-card tilt-card clickable-skill" onclick="inspectSkill('sql')" title="Click to inspect sample SQL queries">
+            <div class="skill-top">
+              <div class="skill-icon-wrap" style="color: #A78BFA;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <div class="skill-name-wrap">
+                <div class="skill-name">SQL</div>
+                <span class="skill-stage">Relational Queries</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Understanding relational database design, writing basic to intermediate SELECT queries, filtering, aggregations, and table relationships.
+            </p>
+            <div class="skill-inspect-badge">Inspect Code ↗</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Productivity Tools -->
+      <div class="skills-category-group reveal-on-scroll delay-3" data-category="tools" style="margin-top: 36px;">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3 class="category-title">Productivity &amp; Workflow</h3>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Microsoft Excel -->
+          <div class="skill-card tilt-card clickable-skill" onclick="inspectSkill('excel')" title="Click to inspect Excel formulas">
+            <div class="skill-top">
+              <div class="skill-icon-wrap" style="color: #10B981;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
+              </div>
+              <div class="skill-name-wrap">
+                <div class="skill-name">Microsoft Excel</div>
+                <span class="skill-stage">Data Analysis</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Structuring datasets, using arithmetic &amp; logical formulas, data validation, summary tables, and creating visual charts for academic reporting.
+            </p>
+            <div class="skill-inspect-badge">Inspect Formulas ↗</div>
+          </div>
+
+          <!-- Developer Tools / Environment -->
+          <div class="skill-card tilt-card">
+            <div class="skill-top">
+              <div class="skill-icon-wrap" style="color: #C084FC;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </div>
+              <div class="skill-name-wrap">
+                <div class="skill-name">VS Code &amp; Git Basics</div>
+                <span class="skill-stage">Dev Environment</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Comfortable using VS Code as primary IDE, terminal integration, code organization, and basic Git version control commands.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. PROJECTS SECTION ("Things I've Built")
+       ========================================================================= -->
+  <section class="section" id="projects" style="background: rgba(15, 15, 23, 0.4);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>04. Featured Work</span>
+        </div>
+        <h2 class="section-title">Things I've Built</h2>
+        <p class="section-subtitle">
+          Early hands-on projects highlighting programming logic, modular design, and user interaction.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Python Calculator -->
+        <article class="project-card tilt-card reveal-on-scroll">
+          <div class="project-preview">
+            <div class="project-preview-mockup">
+              <div class="mockup-bar">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+              </div>
+              <div class="mockup-code">
+                &gt; python calculator.py<br />
+                Select operation (1-5): <span class="out">4</span><br />
+                Enter num1: 24 | num2: 6<br />
+                Result: <span class="out">24 / 6 = 4.0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="project-badge-row">
+              <span class="project-badge">Beginner Project • CLI Utility</span>
+              <span class="project-date">Python</span>
+            </div>
+
+            <h3 class="project-title">Python Calculator</h3>
+            <p class="project-desc">
+              A modular command-line calculator designed with clean functions for fundamental arithmetic operations. Features user input validation, continuous calculation loops, and robust error handling to prevent division by zero.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Python 3</span>
+              <span class="project-tag">Modular Functions</span>
+              <span class="project-tag">Error Handling</span>
+              <span class="project-tag">CLI</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openCalculatorDemo()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Live Demo</span>
+              </button>
+              <button class="btn btn-secondary" onclick="viewCalculatorCode()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>View Code</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Random Number Guessing Game -->
+        <article class="project-card tilt-card reveal-on-scroll delay-1">
+          <div class="project-preview">
+            <div class="project-preview-mockup">
+              <div class="mockup-bar">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+              </div>
+              <div class="mockup-code">
+                &gt; python game.py<br />
+                [Attempts: 7] Guess (1-100): <span class="out">50</span><br />
+                &gt;&gt; Too High! Try lower.<br />
+                [Attempts: 6] Guess: <span class="out">42</span> 🎉 Match!
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="project-badge-row">
+              <span class="project-badge">Beginner Project • Game Logic</span>
+              <span class="project-date">Python</span>
+            </div>
+
+            <h3 class="project-title">Random Number Guessing Game</h3>
+            <p class="project-desc">
+              An interactive terminal game built with Python's random module. Includes dynamic random number generation within custom bounds, attempt limits, contextual hint feedback ("Too high / Too low"), and replayability loops.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Random Module</span>
+              <span class="project-tag">Conditionals</span>
+              <span class="project-tag">Game Loop</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openGameDemo()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Play Game</span>
+              </button>
+              <button class="btn btn-secondary" onclick="viewGuessingGameCode()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>View Code</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Future Project Placeholder Card -->
+        <article class="project-card project-card-future tilt-card reveal-on-scroll delay-2">
+          <div class="future-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <span class="project-badge" style="margin-bottom: 12px;">Upcoming Project</span>
+          <h3 class="future-title">Full-Stack Student Portal</h3>
+          <p class="future-desc">
+            Currently architecting a web project connecting an interactive HTML/CSS frontend with an SQL database for student task &amp; schedule management.
+          </p>
+          <div class="project-tags" style="justify-content: center; margin-bottom: 0;">
+            <span class="project-tag">HTML5</span>
+            <span class="project-tag">CSS3</span>
+            <span class="project-tag">SQL</span>
+            <span class="project-tag">In Development</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. WHAT I'M LEARNING SECTION ("Currently Exploring")
+       ========================================================================= -->
+  <section class="section" id="exploring">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>05. Learning Roadmap</span>
+        </div>
+        <h2 class="section-title">Currently Exploring</h2>
+        <p class="section-subtitle">
+          Key domains and computational subjects I am currently diving into, reading documentation on, and coding actively.
+        </p>
+      </div>
+
+      <div class="exploring-grid">
+        <!-- 1. C Fundamentals -->
+        <div class="exploring-card tilt-card reveal-on-scroll">
+          <div class="exploring-top">
+            <div class="exploring-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+            </div>
+            <span class="exploring-status-tag">Deep Dive</span>
+          </div>
+          <h3 class="exploring-title">Improving C Programming Fundamentals</h3>
+          <p class="exploring-desc">
+            Deepening my understanding of pointer arithmetic, dynamic memory allocation (<code>malloc</code>/<code>free</code>), struct data structures, and low-level execution models.
+          </p>
+          <div class="progress-indicator">
+            <div class="progress-label-row">
+              <span>Course Progress</span>
+              <span>Active</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 75%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Python Development -->
+        <div class="exploring-card tilt-card reveal-on-scroll delay-1">
+          <div class="exploring-top">
+            <div class="exploring-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <span class="exploring-status-tag">Practicing</span>
+          </div>
+          <h3 class="exploring-title">Python Development &amp; Scripting</h3>
+          <p class="exploring-desc">
+            Exploring object-oriented principles (classes, inheritance), file I/O operations, automation scripts, and standard library utilities for rapid prototyping.
+          </p>
+          <div class="progress-indicator">
+            <div class="progress-label-row">
+              <span>Exploration</span>
+              <span>Active</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 65%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Web Development -->
+        <div class="exploring-card tilt-card reveal-on-scroll delay-2">
+          <div class="exploring-top">
+            <div class="exploring-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <span class="exploring-status-tag">Building</span>
+          </div>
+          <h3 class="exploring-title">Modern Web Development</h3>
+          <p class="exploring-desc">
+            Mastering semantic HTML5, modern CSS architectures (Flexbox/Grid, custom properties), responsive mobile-first layouts, and interactive JavaScript DOM manipulation.
+          </p>
+          <div class="progress-indicator">
+            <div class="progress-label-row">
+              <span>Practical UI</span>
+              <span>Active</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 70%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. SQL & Database Management -->
+        <div class="exploring-card tilt-card reveal-on-scroll delay-3">
+          <div class="exploring-top">
+            <div class="exploring-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <span class="exploring-status-tag">Learning</span>
+          </div>
+          <h3 class="exploring-title">SQL &amp; Database Management</h3>
+          <p class="exploring-desc">
+            Understanding relational schema design, primary &amp; foreign key constraints, table normalization, and crafting multi-table JOIN queries.
+          </p>
+          <div class="progress-indicator">
+            <div class="progress-label-row">
+              <span>Database Foundations</span>
+              <span>Active</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 60%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Problem Solving & Data Structures -->
+        <div class="exploring-card tilt-card reveal-on-scroll delay-4">
+          <div class="exploring-top">
+            <div class="exploring-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <span class="exploring-status-tag">Foundation</span>
+          </div>
+          <h3 class="exploring-title">Problem Solving &amp; Data Structures</h3>
+          <p class="exploring-desc">
+            Strengthening computational logic with arrays, strings, basic search &amp; sort algorithms, recursion concepts, and time complexity analysis (Big-O).
+          </p>
+          <div class="progress-indicator">
+            <div class="progress-label-row">
+              <span>Algorithmic Thinking</span>
+              <span>Active</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 55%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. CONTACT SECTION ("Let's Connect")
+       ========================================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>06. Get in Touch</span>
+        </div>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">
+          I am always open to discussing new projects, student opportunities, or learning advice. Feel free to reach out!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Contact Details Card -->
+        <div class="contact-info-card tilt-card reveal-on-scroll">
+          <h3 class="contact-info-title">Say Hello</h3>
+          <p class="contact-info-desc">
+            Whether you are a fellow student, a mentor, or an engineering enthusiast, my inbox is open. I am keen to learn, collaborate, and contribute.
+          </p>
+
+          <div class="contact-details-list">
+            <!-- Email -->
+            <div class="contact-detail-item">
+              <div class="detail-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="detail-text-wrap">
+                <span class="detail-label">Email Placeholder</span>
+                <span class="detail-value">
+                  <a href="mailto:nishita.g.dev@example.com">nishita.g.dev@example.com</a>
+                </span>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-detail-item">
+              <div class="detail-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="detail-text-wrap">
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Bengaluru, Karnataka, India</span>
+              </div>
+            </div>
+
+            <!-- College -->
+            <div class="contact-detail-item">
+              <div class="detail-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <div class="detail-text-wrap">
+                <span class="detail-label">Institution</span>
+                <span class="detail-value">Bangalore Institute of Technology</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div style="margin-bottom: 24px;">
+            <button class="btn btn-secondary btn-sm" id="copy-email-btn" data-email="nishita.g.dev@example.com" style="width: 100%;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy Email Address</span>
+            </button>
+          </div>
+
+          <!-- Social Link Placeholders -->
+          <div>
+            <span class="detail-label" style="display: block; margin-bottom: 12px;">Profiles &amp; Links</span>
+            <div class="contact-social-row">
+              <a href="https://github.com/your-username" class="social-btn" onclick="handlePlaceholderClick(event, 'GitHub')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://linkedin.com/in/your-username" class="social-btn" onclick="handlePlaceholderClick(event, 'LinkedIn')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="mailto:nishita.g.dev@example.com" class="social-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Mail</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Contact Form -->
+        <div class="contact-form-card tilt-card reveal-on-scroll delay-1">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="sender-name" class="form-label">Your Name</label>
+              <input type="text" id="sender-name" class="form-input" placeholder="e.g. Alex Johnson" required />
+            </div>
+
+            <div class="form-group">
+              <label for="sender-email" class="form-label">Your Email</label>
+              <input type="email" id="sender-email" class="form-input" placeholder="alex@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="sender-subject" class="form-label">Subject</label>
+              <input type="text" id="sender-subject" class="form-input" placeholder="Project Collaboration / Quick Hello" />
+            </div>
+
+            <div class="form-group">
+              <label for="sender-message" class="form-label">Message</label>
+              <textarea id="sender-message" class="form-textarea" maxlength="500" placeholder="Write your message here..." required></textarea>
+              <div class="char-counter-wrap">
+                <span id="char-counter">0 / 500</span>
+              </div>
+            </div>
+
+            <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width: 100%;">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+
+            <p class="form-helper-note">
+              💡 <em>Note for Nishita:</em> You can easily connect this form to a backend like Formspree or EmailJS by updating the form action in <code>index.html</code>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div class="monogram-badge" style="width: 32px; height: 32px; font-size: 0.8rem;">NG</div>
+            <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-white);">Nishita G</span>
+          </div>
+          <p class="footer-quote">
+            Information Science &amp; Engineering Student • Bangalore Institute of Technology
+          </p>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#hero" class="footer-nav-link">Home</a></li>
+          <li><a href="#about" class="footer-nav-link">About</a></li>
+          <li><a href="#education" class="footer-nav-link">Education</a></li>
+          <li><a href="#skills" class="footer-nav-link">Skills</a></li>
+          <li><a href="#projects" class="footer-nav-link">Projects</a></li>
+          <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <span>Designed &amp; Built by <strong>Nishita G</strong></span>
+          <span style="margin: 0 8px; opacity: 0.4;">•</span>
+          <span>Class of 2030</span>
+        </div>
+
+        <a href="#hero" class="back-to-top-btn" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#hero" class="floating-back-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </a>
+
+  <!-- =========================================================================
+       INTERACTIVE MODALS & CANVAS OVERLAYS
+       ========================================================================= -->
+  <!-- Project & Code Demo Modal -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-purple);"></span>
+          <h3 class="modal-title" id="modal-title">Project Interactive View</h3>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Injected dynamically via js/project-demos.js & js/interactive.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toast-notice" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+    <span id="toast-message">Notification message</span>
+  </div>
+
+  <!-- Fullscreen Celebration Confetti Canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Scripts -->
+  <script src="js/background.js"></script>
+  <script src="js/project-demos.js"></script>
+  <script src="js/interactive.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
