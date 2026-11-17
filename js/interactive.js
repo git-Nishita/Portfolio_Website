@@ -246,7 +246,7 @@ Hub:         Located in the heart of Bengaluru, India's Silicon Valley.`,
 
     contact: `Connect with Nishita G:
 • Email:    nishita.g.dev@example.com (Placeholder)
-• GitHub:   https://github.com/your-username
+• GitHub:   https://github.com/git-Nishita
 • LinkedIn: https://linkedin.com/in/your-username
 • Location: Bengaluru, Karnataka, India`,
 

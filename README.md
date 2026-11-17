@@ -117,7 +117,7 @@ To receive real emails when someone submits the contact form, you can use **Form
    ```
 3. In your GitHub repository, go to **Settings** > **Pages**.
 4. Under **Branch**, select `main` and root `/`, then click **Save**.
-5. Your website will be live at: `https://<your-username>.github.io/portfolio/`!
+5. Your website will be live at: `https://git-nishita.github.io/Portfolio_Website/`!
 
 ### Option B: Vercel or Netlify
 - Drag and drop your project folder onto [Netlify Drop](https://app.netlify.com/drop) or import from GitHub via [Vercel](https://vercel.com) for instant deployment with free SSL.
